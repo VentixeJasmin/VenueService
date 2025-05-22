@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Presentation.Models; 
 
-namespace Data.Contexts;
+namespace Presentation.Data;
 
 public class DataContext(DbContextOptions<DataContext> options) : DbContext(options)
 {
-    public DbSet<VenueEntity> Events { get; set; }
+    public DbSet<VenueEntity> Venues { get; set; }
 }

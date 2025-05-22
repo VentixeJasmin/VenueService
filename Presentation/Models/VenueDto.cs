@@ -2,17 +2,16 @@
 
 namespace Presentation.Models; 
 
-public class VenueEntity
+public class VenueDto
 {
-    [Required]
-    public int Id { get; set; }
+    public int? Id { get; set; }
 
     [Required]
     public string Title { get; set; } = null!;
 
     public string? VenueType { get; set; }
 
-    public string? Description { get; set; } 
+    public string? Description { get; set; }
 
     public int Capacity { get; set; }
 
@@ -24,5 +23,4 @@ public class VenueEntity
     public string City { get; set; } = null!;
 
     public string? MapUrl { get; set; }
-
 }
