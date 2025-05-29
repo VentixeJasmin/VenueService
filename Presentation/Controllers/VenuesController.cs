@@ -40,7 +40,7 @@ public class VenuesController(VenueService venueService) : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetEvents()
+    public async Task<IActionResult> GetVenues()
     {
         var venues = await _venueService.GetAllVenues();
 
@@ -57,7 +57,7 @@ public class VenuesController(VenueService venueService) : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetEventById(int id)
+    public async Task<IActionResult> GetVenueById(int id)
     {
         var venue = await _venueService.GetVenueById(id);
 

@@ -5,7 +5,7 @@
 namespace Presentation.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class VenuesAdded : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
