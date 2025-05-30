@@ -66,7 +66,7 @@ public class VenueService(DataContext context)
         try
         {
             var venue = await _context.Venues.FirstOrDefaultAsync(v => v.Id == id); 
-            if (venue == null)
+            if (venue == null) 
             {
                 Console.WriteLine("Couldn't find venue.");
                 return null;
