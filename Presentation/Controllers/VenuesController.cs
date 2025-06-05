@@ -70,7 +70,7 @@ public class VenuesController(VenueService venueService) : ControllerBase
         }
         else
         {
-            return NotFound();
+            return NotFound(new { message = "The venue wasn't found."});
         }
     }
 }

@@ -23,6 +23,6 @@ public class VenueEntity
     [Required]
     public string City { get; set; } = null!;
 
-    public string? MapUrl { get; set; }
+    public string? MapUrl { get; set; } 
 
 }
