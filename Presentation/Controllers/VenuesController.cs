@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Presentation.Models;
 using Presentation.Services;
@@ -11,6 +12,7 @@ public class VenuesController(VenueService venueService) : ControllerBase
 {
     private readonly VenueService _venueService = venueService;
 
+    [Authorize]
     [HttpGet("form-data")]
     public IActionResult GetVenueFormData()
     {
@@ -25,6 +27,7 @@ public class VenuesController(VenueService venueService) : ControllerBase
         }
     }
 
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> CreateVenue(VenueDto dto)
     {
