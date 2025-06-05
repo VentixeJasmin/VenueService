@@ -34,7 +34,7 @@ public class VenuesController(VenueService venueService) : ControllerBase
         try
         {
             var result = await _venueService.CreateVenue(dto);
-            return Created();
+            return Created("", result);
         }
         catch (Exception ex)
         {
